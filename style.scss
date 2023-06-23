@@ -2,6 +2,8 @@ $header-font-color: #131d34;
 $background: #fff;
 $theme-color: #2498b3;
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap");
+
 html {
     font-size: 62.5%;
     color: $header-font-color;
@@ -18,6 +20,8 @@ body {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -94,28 +98,6 @@ a {
             }
         }
     }
-    // .menu-link {
-    //     &:hover {
-    //         background-color: #d4f1f8;
-    //         .sub-menu {
-    //             display: block;
-    //             // li {
-    //             //     font-weight: normal;
-    //             //     background-color: #e9f8fb;
-    //             //     a {
-    //             //         position: relative;
-    //             //         padding: 15px 60px 15px 15px;
-    //             //         height: auto;
-    //             //     }
-    //             //     &:hover {
-    //             //         color: #2498b3;
-    //             //         background-color: #fff;
-    //             //         text-decoration: none;
-    //             //     }
-    //             // }
-    //         }
-    //     }
-    // }
 }
 .sub-menu {
     position: absolute;
