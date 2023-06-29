@@ -2,7 +2,7 @@ $header-font-color: #131d34;
 $background: #fff;
 $theme-color: #2498b3;
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700;900&display=swap");
 
 html {
     font-size: 62.5%;
@@ -16,6 +16,10 @@ body {
         helvetica, sans-serif;
     font-size: 1.6rem;
     margin: 0;
+}
+
+h1 {
+    font-size: 1.5em;
 }
 
 ul {
@@ -32,12 +36,34 @@ a {
     color: $header-font-color;
 }
 
+img {
+    vertical-align: middle;
+}
+
+.btn a {
+    padding: 15px 23px;
+    border-radius: 4px;
+    display: block;
+    font-weight: 700;
+    border: solid 1px #c3c3c3;
+    background-color: #fff;
+}
+
+/*
+
+******************************************************
+heder部
+
+******************************************************
+*/
+
 .header {
     display: flex;
     justify-content: space-between;
     background-color: $background;
     width: 100%;
     position: fixed;
+    z-index: 1100;
 
     top: 0;
     left: 0;
@@ -127,4 +153,139 @@ a {
 }
 .open {
     display: block;
+}
+
+/*
+******************************************************
+メインビジュアル部
+
+******************************************************
+*/
+
+.main {
+    padding-top: 70px; //hedaerの高さ分
+}
+
+.mainvisual {
+    position: relative; //子要素のabsoluteとセットで使用することが多い
+    height: 650px; //高さ固定
+    overflow: hidden; //領域からはみ出した部分は表示しない
+    background: transparent url("/img/bg-hero3.png") no-repeat center center;
+    background-size: cover; //縦横比が保持されたまま　background centerとよく使う
+    background-attachment: fixed; //背景画像を固定する（スクロールしない）
+}
+
+.layer {
+    position: absolute; //親要素からどの位置にくるか
+    top: 0; //親要素の位置から下に0
+    width: 100%;
+    height: 100%;
+}
+.layer1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 80px;
+    background: transparent url("/img/bg-hero1.png") no-repeat center center;
+    z-index: 200;
+}
+
+.layer2 {
+    background: transparent url("/img/bg-hero2.png") no-repeat center center;
+    /*説明
+    transparent: 背景色を透明に設定します。
+    url("/img/bg-hero2.png"): 背景画像のURLを設定。このURLの画像が要素の背景として使用される。
+    no-repaet: 背景画像が繰り返されず、一度だけ表示される。つまり、画像が要素の大きさに対して小さすぎる場合、画像はそのサイズのまま中央に配置され、画像がない部分は透明になります。
+    center center: 背景画像の位置を指定。最初の center は水平方向の位置を、2つ目の center は垂直方向の位置を指定
+    */
+}
+
+.main-content {
+    max-width: 530px;
+    border-radius: 10px;
+    padding: 43px 40px 19px 40px;
+    background-color: #fff;
+    text-align: center;
+    .main-content-title {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        img {
+            width: 280px;
+            height: auto;
+        }
+    }
+    p {
+        margin: 1.3em 0 0.5em;
+        font-weight: 700;
+    }
+    .btn {
+        line-height: 1;
+        display: inline-block;
+        a {
+            padding: 24px 37px;
+            font-size: 1.8rem;
+            background-color: $theme-color;
+            border-color: $theme-color;
+            &:link {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/*
+******************************************************
+section部
+
+******************************************************
+*/
+
+.section {
+    padding: 4em 0;
+    background-color: #000;
+}
+
+.recommendation {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -263px;
+    color: #fff;
+    z-index: 1000;
+    font-weight: 700;
+    .recommendation_title {
+        text-align: center;
+        p {
+            margin: 0.2em 0 0 0;
+            font-size: 2.4rem;
+        }
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            width: 230px;
+            height: 230px;
+            border: solid 6px #000;
+            border-radius: 50%;
+            font-size: 100px;
+            color: #000;
+            margin: 0 auto;
+        }
+    }
+    .recommendation_text {
+        p {
+            margin: 0.5em 0 0 0;
+        }
+    }
+    .recommnedation_content {
+        margin: 0 50px;
+        width: 229px;
+    }
+}
+.wrap {
+    margin: 0 auto;
+    max-width: 1078px;
 }

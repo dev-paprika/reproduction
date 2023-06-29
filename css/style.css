@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700;900&display=swap");
 html {
   font-size: 62.5%;
   color: #131d34;
@@ -9,6 +10,10 @@ body {
   font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   font-size: 1.6rem;
   margin: 0;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 ul {
@@ -25,12 +30,33 @@ a :visited {
   color: #131d34;
 }
 
+img {
+  vertical-align: middle;
+}
+
+.btn a {
+  padding: 15px 23px;
+  border-radius: 4px;
+  display: block;
+  font-weight: 700;
+  border: solid 1px #c3c3c3;
+  background-color: #fff;
+}
+
+/*
+
+******************************************************
+heder部
+
+******************************************************
+*/
 .header {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
   width: 100%;
   position: fixed;
+  z-index: 1100;
   top: 0;
   left: 0;
 }
@@ -115,5 +141,137 @@ a :visited {
 
 .open {
   display: block;
+}
+
+/*
+******************************************************
+メインビジュアル部
+
+******************************************************
+*/
+.main {
+  padding-top: 70px;
+}
+
+.mainvisual {
+  position: relative;
+  height: 650px;
+  overflow: hidden;
+  background: transparent url("/img/bg-hero3.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layer1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  background: transparent url("/img/bg-hero1.png") no-repeat center center;
+  z-index: 200;
+}
+
+.layer2 {
+  background: transparent url("/img/bg-hero2.png") no-repeat center center;
+  /*説明
+  transparent: 背景色を透明に設定します。
+  url("/img/bg-hero2.png"): 背景画像のURLを設定。このURLの画像が要素の背景として使用される。
+  no-repaet: 背景画像が繰り返されず、一度だけ表示される。つまり、画像が要素の大きさに対して小さすぎる場合、画像はそのサイズのまま中央に配置され、画像がない部分は透明になります。
+  center center: 背景画像の位置を指定。最初の center は水平方向の位置を、2つ目の center は垂直方向の位置を指定
+  */
+}
+
+.main-content {
+  max-width: 530px;
+  border-radius: 10px;
+  padding: 43px 40px 19px 40px;
+  background-color: #fff;
+  text-align: center;
+}
+.main-content .main-content-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.main-content .main-content-title img {
+  width: 280px;
+  height: auto;
+}
+.main-content p {
+  margin: 1.3em 0 0.5em;
+  font-weight: 700;
+}
+.main-content .btn {
+  line-height: 1;
+  display: inline-block;
+}
+.main-content .btn a {
+  padding: 24px 37px;
+  font-size: 1.8rem;
+  background-color: #2498b3;
+  border-color: #2498b3;
+}
+.main-content .btn a:link {
+  color: #fff;
+}
+
+/*
+******************************************************
+section部
+
+******************************************************
+*/
+.section {
+  padding: 4em 0;
+  background-color: #000;
+}
+
+.recommendation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -263px;
+  color: #fff;
+  z-index: 1000;
+  font-weight: 700;
+}
+.recommendation .recommendation_title {
+  text-align: center;
+}
+.recommendation .recommendation_title p {
+  margin: 0.2em 0 0 0;
+  font-size: 2.4rem;
+}
+.recommendation .recommendation_title .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 230px;
+  height: 230px;
+  border: solid 6px #000;
+  border-radius: 50%;
+  font-size: 100px;
+  color: #000;
+  margin: 0 auto;
+}
+.recommendation .recommendation_text p {
+  margin: 0.5em 0 0 0;
+}
+.recommendation .recommnedation_content {
+  margin: 0 50px;
+  width: 229px;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1078px;
 }
 /*# sourceMappingURL=style.css.map */
