@@ -10,6 +10,7 @@ body {
   font-family: "Noto Sans JP", MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   font-size: 1.6rem;
   margin: 0;
+  overflow-y: scroll;
 }
 
 h1 {
@@ -137,10 +138,6 @@ heder部
 
 .close {
   display: none;
-}
-
-.open {
-  display: block;
 }
 
 /*
@@ -273,5 +270,12 @@ section部
 .wrap {
   margin: 0 auto;
   max-width: 1078px;
+}
+
+.banner {
+  height: 650px;
+  padding: 2em 0;
+  overflow: hidden;
+  background-color: #d4f1f8;
 }
 /*# sourceMappingURL=style.css.map */
